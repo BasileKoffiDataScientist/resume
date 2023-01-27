@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-taggit = "*"
+django-bootstrap4 = "*"
+django-ckeditor = "*"
+django-widget-tweaks = "*"
+django-user-visit = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
