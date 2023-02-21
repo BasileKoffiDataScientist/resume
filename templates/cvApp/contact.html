@@ -39,43 +39,57 @@
                 </div>
             </div> <!-- Contact Information End -->
         </div>
-        <div class="row">
-            <div class="col-xl-6 col-lg-6">
-                <!-- Contact Form -->
-                <div class="contact_form">
-                    <form class="contact__form" method="post" action="https://themeforest.weexen.com/fariha/color-1/mail.php">
-                        <!-- Form Message -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="alert alert-success contact__msg" style="display: none"
-                                    role="alert">
-                                    Your message was sent successfully.
-                                </div>
-                            </div>
-                        </div> <!-- Form Message End -->
-                        <!-- Form Element -->
-                        <div class="form_input_box">
-                            <input class="pointer-input" name="name" type="text" placeholder="Your name" required>
-                        </div>
-                        <div class="form_input_box">
-                            <input class="pointer-input" name="email" type="email" placeholder="Your email" required>
-                        </div>
-                        <div class="form_input_box">
-                            <input class="pointer-input" name="subject" type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form_input_box">
-                            <textarea class="pointer-input" name="message" rows="3" placeholder="Your message" required></textarea>
-                        </div>
-                        <button class="form-submit-btn pointer-href" name="submit" type="submit">Send Message</button>
-                        <!-- Form Element End -->
-                    </form>
-                </div> <!-- Contact Form End -->
-            </div>
-            <div class="col-xl-6 col-lg-6">
-                <div id="map"></div>
-            </div>
-        </div>
+
+
+                <div class="home-title" align="center">
+
+
+                    <div class="template-btn">
+                        <a href="{% url 'cvApp:resume' %}" class="pointer-href">My Resume Here</a>
+                        <a href="{% url 'cvApp:about' %}" class="pointer-href">About Me</a>
+                    </div>
+                </div> <!-- Author Name, My Name, Home Page Title End -->
+<!--        <br><br><br>-->
+
+<!--        <div class="row" align="center">-->
+<!--            <div class="col-xl-6 col-lg-6">-->
+<!--                &lt;!&ndash; Contact Form &ndash;&gt;-->
+<!--                <div class="contact_form">-->
+<!--                    <form class="contact__form" method="post" action="https://themeforest.weexen.com/fariha/color-1/mail.php">-->
+<!--                        &lt;!&ndash; Form Message &ndash;&gt;-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-12">-->
+<!--                                <div class="alert alert-success contact__msg" style="display: none"-->
+<!--                                    role="alert">-->
+<!--                                    Your message was sent successfully.-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div> &lt;!&ndash; Form Message End &ndash;&gt;-->
+<!--                        &lt;!&ndash; Form Element &ndash;&gt;-->
+<!--                        <div class="form_input_box">-->
+<!--                            <input class="pointer-input" name="name" type="text" placeholder="Your name" required>-->
+<!--                        </div>-->
+<!--                        <div class="form_input_box">-->
+<!--                            <input class="pointer-input" name="email" type="email" placeholder="Your email" required>-->
+<!--                        </div>-->
+<!--                        <div class="form_input_box">-->
+<!--                            <input class="pointer-input" name="subject" type="text" placeholder="Subject" required>-->
+<!--                        </div>-->
+<!--                        <div class="form_input_box">-->
+<!--                            <textarea class="pointer-input" name="message" rows="3" placeholder="Your message" required></textarea>-->
+<!--                        </div>-->
+<!--                        <button class="form-submit-btn pointer-href" name="submit" type="submit">Send Message</button>-->
+<!--                        &lt;!&ndash; Form Element End &ndash;&gt;-->
+<!--                    </form>-->
+<!--                </div> &lt;!&ndash; Contact Form End &ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="col-xl-6 col-lg-6">-->
+<!--                <div id="map"></div>-->
+<!--            </div>-->
+<!--        </div>-->
     </main> <!-- Single page end -->
+
+
 
 {% endblock content %}
 
