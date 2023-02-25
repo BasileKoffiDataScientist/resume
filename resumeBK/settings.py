@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-o62l!^j6*0z7y+i=%g#*m4fw$k58axl1-n5*(#)u4#@va41q^-
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://basilekoffi.herokuapp.com/', '127.0.0.1', '*']
 
 
 # Application definition
