@@ -48,11 +48,11 @@ INSTALLED_APPS = [
     'blog',
 
     #3rd Party App
-    'ckeditor',
-    'taggit',
-    'user_visit',
-    "bootstrap4",
-    'widget_tweaks',
+    # 'ckeditor',
+    # 'taggit',
+    # 'user_visit',
+    # "bootstrap4",
+    # 'widget_tweaks',
 ]
 
 MIDDLEWARE = [
