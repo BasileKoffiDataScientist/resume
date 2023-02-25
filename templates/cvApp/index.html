@@ -4,7 +4,7 @@
 
         <!-- Home Section -->
         <main class="home-section">
-            <div class="backgroundShape-right"></div>
+<!--            <div class="backgroundShape-right"></div>-->
             <div class="home-container d-flex align-items-center justify-content-center">
                 <!-- Particles Animation -->
                 <div id="particles-js"></div>
@@ -12,17 +12,20 @@
                 <!-- Author Name, My Name, Home Page Title -->
                 <div class="home-title">
 
-                    <h1 class="theme-color">Basile Koffi</h1>
-                    <h4>Data Scientist & Django Developer</h4>
+                    <h1 class="theme-color">Basile Koffi, PhD - M.Sc</h1>
+                    <h3>Data Scientist & Django Developer </h3><br>
+                    <h5>(This website was built with Django)</h5> <br><br>
                     <div class="template-btn">
                         <a href="{% url 'cvApp:resume' %}" class="pointer-href">My Resume Here</a>
-                        <a href="#" class="pointer-href">Download CV</a>
+                        <a href="{% url 'cvApp:download_cv' %}" class="pointer-href">Download CV</a>
                     </div>
                 </div> <!-- Author Name, My Name, Home Page Title End -->
                 <!-- Dribbble Slider -->
+<!--
                 <div class="dribbble-btn pointer-href">
                     <button data-toggle="tooltip" data-placement="left" title="Recent Dribbbles"><i class="fas fa-basketball-ball"></i></button>
                 </div>
+-->
                 <div class="dribbble-slider">
                     <div class="dribbble-close-btn pointer-href">
                         <i class="fas fa-times"></i>
