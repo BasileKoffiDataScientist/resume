@@ -10,6 +10,11 @@ django-bootstrap4 = "*"
 django-ckeditor = "*"
 django-widget-tweaks = "*"
 django-user-visit = "*"
+heroku = "*"
+django-heroku = "*"
+psycopg2 = "*"
+gunicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
