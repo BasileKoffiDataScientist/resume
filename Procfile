@@ -1,1 +1,2 @@
-web gunicorn resumeBK.wsgi:application --log-file -
+
+web: gunicorn resumeBK.wsgi --log-file -
