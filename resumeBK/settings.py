@@ -28,10 +28,10 @@ SECRET_KEY = 'django-insecure-o62l!^j6*0z7y+i=%g#*m4fw$k58axl1-n5*(#)u4#@va41q^-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
+DEBUG = os.environ.get('DEBUG') != 'False'
 
-ALLOWED_HOSTS = ['https://basilekoffi.herokuapp.com/', '127.0.0.1', '*']
-
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
 # Application definition
 
@@ -69,7 +69,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'resumeBK.urls'
 
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 TEMPLATES = [
     {
@@ -142,9 +142,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = ["static/"]
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # CKeditor Config
@@ -162,12 +161,12 @@ CKEDITOR_CONFIGS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configuration Gunicorn
-if 'DYNO' in os.environ:
-    # Utilisez les valeurs de configuration fournies par Heroku
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    ALLOWED_HOSTS = ['*']
-    DEBUG = False
+# if 'DYNO' in os.environ:
+#     # Utilisez les valeurs de configuration fournies par Heroku
+#     import dj_database_url
+#     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#     ALLOWED_HOSTS = ['*']
+#     DEBUG = False
 
 django_heroku.settings(locals())
